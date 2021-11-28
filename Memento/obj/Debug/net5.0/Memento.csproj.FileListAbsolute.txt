@@ -1,0 +1,16 @@
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.csproj.AssemblyReference.cache
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.AssemblyInfoInputs.cache
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.AssemblyInfo.cs
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.csproj.CoreCompileInputs.cache
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.exe
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.deps.json
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.runtimeconfig.json
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.runtimeconfig.dev.json
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.dll
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\ref\Memento.dll
+C:\Users\Artur\source\repos\Memento\Memento\bin\Debug\net5.0\Memento.pdb
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.dll
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\ref\Memento.dll
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.pdb
+C:\Users\Artur\source\repos\Memento\Memento\obj\Debug\net5.0\Memento.genruntimeconfig.cache
