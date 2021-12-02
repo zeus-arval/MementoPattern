@@ -3,7 +3,7 @@
   <Class Name="Memento.Unix">
     <Position X="3.5" Y="3.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAhAAAAAABIA=</HashCode>
+      <HashCode>AACAAAAAAAAAAgAAAgAAAAQAAAAAAAAAAhAAAAAABIA=</HashCode>
       <FileName>Unix.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -14,23 +14,21 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Memento.Document">
-    <Position X="3.25" Y="8" Width="1.5" />
+    <Position X="3.25" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Document.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Memento.Image">
-    <Position X="5.25" Y="8" Width="1.5" />
+    <Position X="5.25" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Image.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Memento.Storage">
-    <Position X="8" Y="4.25" Width="1.5" />
+    <Position X="7.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABIA=</HashCode>
       <FileName>Storage.cs</FileName>
@@ -43,23 +41,21 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Memento.USB">
-    <Position X="10.75" Y="6" Width="1.5" />
+    <Position X="9.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAABgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>USB.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Memento.SSD">
-    <Position X="12.75" Y="6" Width="1.5" />
+    <Position X="11.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAABgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SSD.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Memento.MemoryStatus">
-    <Position X="1" Y="1.75" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAQAAAAAAACAAAAAEAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>MemoryStatus.cs</FileName>
@@ -68,29 +64,29 @@
   <Class Name="Memento.Memory">
     <Position X="6.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAAAgAIAAAAiAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAAAgAKAQAAiAAAAAA=</HashCode>
       <FileName>Memory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="MemoryStatus" />
     </ShowAsAssociation>
   </Class>
-  <Interface Name="Memento.IHardDisk">
-    <Position X="11" Y="3.75" Width="1.5" />
+  <Class Name="Memento.Common.File">
+    <Position X="4" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAABgA=</HashCode>
-      <FileName>IHardDisk.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Memento.Common.HardDisk">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABgA=</HashCode>
+      <FileName>Common\HardDisk.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Storage" />
     </ShowAsAssociation>
-  </Interface>
-  <Interface Name="Memento.IFile">
-    <Position X="4.5" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IFile.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

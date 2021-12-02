@@ -1,9 +1,14 @@
-﻿namespace Memento
+﻿using Memento.Common;
+
+namespace Memento
 {
-    public class Document : IFile
+    public class Document : File
     {
-        public string Name { get; private set; }
-        public double Size { get; private set; }
         public string Content { get; private set; }
+
+        public Document(string name, double size, string content) : base(name, size)
+        {
+            Content = content;
+        }
     }
 }
