@@ -8,6 +8,9 @@
 *.editorconfig
 *.props
 *.targets
-*.AssmeblyInfo.*
-*AssmeblyInfo.cs
-*
+*.AssemblyInfo.*
+*AssemblyAttributes.*
+*.CopyComplete
+*FileListAbsolute*
+*.exe
+*RootsMapping
