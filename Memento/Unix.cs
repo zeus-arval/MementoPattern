@@ -47,7 +47,7 @@ namespace Memento
             ConsoleColor color = ConsoleColor.Green;
             Console.ForegroundColor = color;
             Console.WriteLine("\n" + String.Concat(Enumerable.Repeat("-", 60)));
-            Memory.PrintMessage(color, $"You have {Memory.FreeSpace} Kbytes free");
+            Memory.PrintMemoryMessage(color, $"You have {Memory.FreeSpace} Kbytes free");
             Console.ForegroundColor = color;
             Console.WriteLine($"{Files.Count} files are in {Name}:");
             foreach(File file in Files)

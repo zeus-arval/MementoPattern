@@ -15,7 +15,7 @@ namespace Memento
         public void ReduceFreeSpace(double size)
         {
             if (size <= 0) throw new Exception("Size cannot be negative or zero");
-            FreeSpace -= size;
+            FreeSpace -= size < FreeSpace ? size : 0.0d;
             MemoryStatus.AddErrorMessage(FreeSpace > 0 ? null : "Memory is full");
         }
         public bool HasEnoughSpace(double targetSize)
@@ -28,9 +28,9 @@ namespace Memento
         {
             FreeSpace = _capacity - _defaultMemory;
             MemoryStatus.AddErrorMessage(null);
-            PrintMessage(ConsoleColor.Yellow, "Space is cleared");
+            PrintMemoryMessage(ConsoleColor.Yellow, "Space is cleared");
         }
-        public void PrintMessage(ConsoleColor color, string message)
+        public void PrintMemoryMessage(ConsoleColor color, string message)
         {
             Console.ForegroundColor = color;
             Console.WriteLine($"\n{message}\n");
