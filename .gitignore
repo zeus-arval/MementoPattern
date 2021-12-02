@@ -1,0 +1,13 @@
+.vs*
+.suo
+*.v2
+*.dll
+*.cache
+*.json
+*.pdb
+*.editorconfig
+*.props
+*.targets
+*.AssmeblyInfo.*
+*AssmeblyInfo.cs
+*
