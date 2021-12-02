@@ -29,7 +29,7 @@ namespace Memento
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(_errorMessage);
+            Console.WriteLine($"[{_errorMessage}]");
             Console.ResetColor();
         }
     }

@@ -28,12 +28,12 @@ namespace Memento
         {
             FreeSpace = _capacity - _defaultMemory;
             MemoryStatus.AddErrorMessage(null);
-            Console.WriteLine("Space is cleared");
+            PrintMessage(ConsoleColor.Yellow, "Space is cleared");
         }
-        public void PrintFreeMemory(ConsoleColor color)
+        public void PrintMessage(ConsoleColor color, string message)
         {
             Console.ForegroundColor = color;
-            Console.WriteLine($"You have {FreeSpace} Kbytes free");
+            Console.WriteLine($"\n{message}\n");
             Console.ResetColor();
         }
     }

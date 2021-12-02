@@ -30,7 +30,7 @@ namespace Memento
                 if (!Memory.HasEnoughSpace(file.Size)) return;
                 Files.Add(file);
                 Thread.Sleep(100);
-                Console.WriteLine($"Adding {file.Name}\tto /home/$USER/" + (file is Image ? "Pictures" : "Documents"));
+                Console.WriteLine($"\tAdding [{file.Name}]\tto /home/$USER/" + (file is Image ? "Pictures" : "Documents"));
                 Memory.ReduceFreeSpace(file.Size);
             }
             Thread.Sleep(200);
@@ -47,7 +47,7 @@ namespace Memento
             ConsoleColor color = ConsoleColor.Green;
             Console.ForegroundColor = color;
             Console.WriteLine("\n" + String.Concat(Enumerable.Repeat("-", 60)));
-            Memory.PrintFreeMemory(color);
+            Memory.PrintMessage(color, $"You have {Memory.FreeSpace} Kbytes free");
             Console.ForegroundColor = color;
             Console.WriteLine($"{Files.Count} files are in {Name}:");
             foreach(File file in Files)

@@ -26,7 +26,7 @@ namespace Memento
                 _ = file ?? throw new Exception("File couldn't be null");
                 if (!Memory.HasEnoughSpace(file.Size)) break;
                 Thread.Sleep(sleepTime);
-                Console.WriteLine($"Adding {file.Name}");
+                Console.WriteLine($"\tAdding [{file.Name}]");
                 Files.Add(file);
                 Memory.ReduceFreeSpace(file.Size);
             }
