@@ -8,9 +8,9 @@ namespace Memento
 {
     public sealed class Unix
     {
-        public string Name { get; set; }
-        public Memory Memory { get; set; }
-        public List<File> Files { get; set; } = new();
+        public string Name { get; private set; }
+        public Memory Memory { get; private set; }
+        public List<File> Files { get; private set; } = new();
 
         public Unix(string name, double capacity)
         {
@@ -27,7 +27,7 @@ namespace Memento
             foreach(File file in files)
             {
                 _ = file ?? throw new Exception("File must contain any information");
-                if (!Memory.HasEnoughSpace(file.Size)) return;
+                if (!Memory.HasEnoughSpaceForTarget(file.Size)) return;
                 Files.Add(file);
                 Thread.Sleep(100);
                 Console.WriteLine($"\tAdding [{file.Name}]\tto /home/$USER/" + (file is Image ? "Pictures" : "Documents"));
@@ -67,7 +67,7 @@ namespace Memento
             {
                 _ = file ?? throw new Exception("File must contain any information");
 
-                if (!Memory.HasEnoughSpace(file.Size)) return;
+                if (!Memory.HasEnoughSpaceForTarget(file.Size)) return;
                 Files.Add(file);
                 Memory.ReduceFreeSpace(file.Size);
             }

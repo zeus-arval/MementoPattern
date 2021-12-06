@@ -4,13 +4,11 @@ namespace Memento.Common
 {
     public abstract class File
     {
-        public string Name { get; private set; }
-        public double Size { get; private set; }
+        public string Name { get; private protected set; }
+        public double Size { get; private protected set; }
 
         protected File(string name, double size)
-        {
-            (Name, Size) = (name, size);
-        }
+            => (Name, Size) = (name, size);
 
         public void PrintFileInfo(ConsoleColor color)
         {

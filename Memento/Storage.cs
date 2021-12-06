@@ -7,8 +7,8 @@ namespace Memento
 {
     public class Storage
     {
-        public Memory Memory { get; set; }
-        public List<File> Files { get; set; } = new();
+        public Memory Memory { get; private set; }
+        public List<File> Files { get; private set; } = new();
 
         public Storage(double capacity, List<File> files)
         {
@@ -24,7 +24,7 @@ namespace Memento
             foreach (File file in files)
             {
                 _ = file ?? throw new Exception("File couldn't be null");
-                if (!Memory.HasEnoughSpace(file.Size)) break;
+                if (!Memory.HasEnoughSpaceForTarget(file.Size)) break;
                 Thread.Sleep(sleepTime);
                 Console.WriteLine($"\tAdding [{file.Name}]");
                 Files.Add(file);

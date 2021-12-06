@@ -7,8 +7,6 @@ namespace Memento
         public string Content { get; private set; }
 
         public Document(string name, double size, string content) : base(name, size)
-        {
-            Content = content;
-        }
+            => Content = content;
     }
 }

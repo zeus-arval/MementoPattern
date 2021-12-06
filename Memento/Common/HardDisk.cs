@@ -9,18 +9,12 @@ namespace Memento.Common
         public Storage Storage { get; private protected set; }
 
         public HardDisk(string name, Storage storage)
-        {
-            (Name, Storage) = (name, storage);
-        }
-
+            => (Name, Storage) = (name, storage);
+        
         public void AddFiles(List<File> files)
-        {
-            Storage.AddFiles(files, this);
-        }
+            => Storage.AddFiles(files, this);
 
         public void RemoveFiles()
-        {
-            Storage.RemoveFiles();
-        }
+            => Storage.RemoveFiles();
     }
 }
