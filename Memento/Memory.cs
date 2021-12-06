@@ -6,20 +6,22 @@ namespace Memento
     {
         private readonly double _capacity;
         private readonly double _defaultMemory;
-        public MemoryStatus MemoryStatus { get; set; } = new(null);
-        public double FreeSpace { get; set; }
+        public MemoryStatus MemoryStatus { get; private set; } = new(null);
+        public double FreeSpace { get; private set; }
         public Memory(double capacity, double defaultMemory)
-        {
-            (_capacity, _defaultMemory, FreeSpace) = (capacity, defaultMemory, capacity - defaultMemory);
-        }
+            => (_capacity, _defaultMemory, FreeSpace) = (capacity, defaultMemory, capacity - defaultMemory);
+        
         public void ReduceFreeSpace(double size)
         {
+            if (!MemoryStatus.HasFreeSpace) MemoryStatus.PrintError();
             if (size <= 0) throw new Exception("Size cannot be negative or zero");
-            FreeSpace -= size < FreeSpace ? size : 0.0d;
-            MemoryStatus.AddErrorMessage(FreeSpace > 0 ? null : "Memory is full");
+            bool freeSpaceIsEnough = size < FreeSpace;
+            FreeSpace -= freeSpaceIsEnough ? size : 0.0d;
+            MemoryStatus.AddErrorMessage(freeSpaceIsEnough ? null : "Memory is full");
         }
-        public bool HasEnoughSpace(double targetSize)
+        public bool HasEnoughSpaceForTarget(double targetSize)
         {
+            if (!MemoryStatus.HasFreeSpace) MemoryStatus.PrintError();
             bool hasEnoughSpace = FreeSpace >= targetSize;
             MemoryStatus.AddErrorMessage(hasEnoughSpace ? null : "Not enough memory to complete this operation");
             return hasEnoughSpace;
