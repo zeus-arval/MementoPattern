@@ -45,7 +45,7 @@ namespace MementoTests
             Storage backup = new(128.0d, new List<File> { new Image("Sea.png", 56.0d, Array.Empty<byte>()) });
             Assert.AreEqual(0, unix.Files.Count);
 
-            unix.ResetFromBackup(backup);
+            unix.ResetFromStorage(backup);
             CollectionAssert.AreEqual(backup.Files, unix.Files);
         }
 

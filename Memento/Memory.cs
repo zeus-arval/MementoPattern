@@ -13,7 +13,7 @@ namespace Memento
         
         public void ReduceFreeSpace(double size)
         {
-            if (!MemoryStatus.HasFreeSpace) MemoryStatus.PrintError();
+            if (!MemoryStatus.HasFreeSpace) MemoryStatus.PrintError(); //TODO check if code dublicates
             if (size <= 0) throw new Exception("Size cannot be negative or zero");
             bool freeSpaceIsEnough = size < FreeSpace;
             FreeSpace -= freeSpaceIsEnough ? size : 0.0d;

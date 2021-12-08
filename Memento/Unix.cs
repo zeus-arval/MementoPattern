@@ -58,7 +58,7 @@ namespace Memento
             Console.WriteLine(String.Concat(Enumerable.Repeat("-", 60)) + "\n");
             Console.ResetColor();
         }
-        public void ResetFromBackup(Storage storage)
+        public void ResetFromStorage(Storage storage)
         {
             Files = new();
             Memory.FreeUpSpace();

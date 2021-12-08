@@ -22,7 +22,7 @@ namespace Memento
             HardDisk ssd = new SSD("SSD_M.2", backup);
             ubuntu.RemoveFiles();
             ubuntu.PrintMemoryInfo();
-            ubuntu.ResetFromBackup(ssd.Storage);
+            ubuntu.ResetFromStorage(ssd.Storage);
         }
     }
 }
